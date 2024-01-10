@@ -1,0 +1,21 @@
+<!-- pricing/templates/calculate_pricing.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Pricing</title>
+</head>
+<body>
+
+  <h2>Calculate Pricing</h2>
+  <form method="post" action="{% url 'calculate_pricing' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculate Pricing</button>
+  </form>
+
+  {% if price %}
+    <p>Calculated Price: {{ price }}</p>
+  {% endif %}
+
+</body>
+</html>

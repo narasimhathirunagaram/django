@@ -1,0 +1,17 @@
+<!-- pricing/templates/add_pricing_config.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Pricing Configuration</title>
+</head>
+<body>
+
+  <h2>Add Pricing Configuration</h2>
+  <form method="post" action="{% url 'add_pricing_config' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Pricing Configuration</button>
+  </form>
+
+</body>
+</html>
